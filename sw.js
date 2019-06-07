@@ -2,6 +2,8 @@ var __wpo = {
   "assets": {
     "main": [
       "./images/favicon.svg",
+      "./images/showcase.jpg",
+      "./images/code.jpg",
       "./fonts/libre-baskerville-v5-latin-regular.woff",
       "./fonts/libre-baskerville-v5-latin-regular.woff2",
       "./webpack-bundle.css",
@@ -15,16 +17,18 @@ var __wpo = {
   "externals": [],
   "hashesMap": {
     "014aa3ef72cf2d84ee3776f0672b7e71e477463c": "./images/favicon.svg",
+    "bda89da0577b300fdff902fd85ba85e3cf825088": "./images/showcase.jpg",
+    "11668cd1b120f57f33bb9db33e07682b0b4caa6e": "./images/code.jpg",
     "ba1c671cf1184ee622b2bc57bb07605b5a413de7": "./fonts/libre-baskerville-v5-latin-regular.woff",
     "043840ea188fff2f488849156149cc47707ec289": "./fonts/libre-baskerville-v5-latin-regular.woff2",
-    "229b3d0b3f545dde698ce7a01d395837ed5af1fe": "./webpack-bundle.css",
-    "63e863baa866558da04a395d2d2ca246cbf286dc": "./webpack-bundle.js",
-    "889db8f80143dc6cab87bfd1356adbabe443d90a": "./",
+    "27d3ccde2eb8cc5c94f380c24039e9cefacd70f2": "./webpack-bundle.css",
+    "cd0aeba951615ea2640b1556852ac71206205a32": "./webpack-bundle.js",
+    "8acab8748a2e1bc018812890fd470f6de09f1b82": "./",
     "9d14f44417d29712996df2ec3f9576f6a3323325": "./404.html"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2019-5-10 09:19:22",
+  "version": "2019-6-7 13:08:18",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": true
