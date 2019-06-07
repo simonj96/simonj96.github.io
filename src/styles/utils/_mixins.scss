@@ -1,0 +1,126 @@
+/* MEDIA QUERIES */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint=="mobile" {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="tablet" {
+    @media (max-width: 769px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="desktop" {
+    @media (max-width: 969px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="wrapper" {
+    @media (max-width: 1170px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+//https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  $mq-media-query: "screen and";
+  
+  @if $mq-breakpoint == landscape or $mq-breakpoint == portrait {
+    $mq-media-query: "#{$mq-media-query} (orientation: #{$mq-breakpoint})";
+  }
+  @else if $mq-breakpoint == retina {
+    $mq-media-query: "#{$mq-media-query} (-webkit-min-device-pixel-ratio: 2)," +
+                     "#{$mq-media-query} (min-resolution: 2dppx)";
+  }
+  @else {
+    // If $mq-breakpoint is a key that exists in
+    // $mq-breakpoints, get and use the value
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+      $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+    $mq-media-query: "#{$mq-media-query} (min-width: #{$mq-breakpoint})";
+  }
+  
+  @media #{$mq-media-query} {
+    @content;
+  }
+}
+
+//! Example usage
+/* @include respond-to('mobile') {} */
+
+
+/* CENTERING */
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//! Example usage
+/*
+.parent {
+position: relative;
+}
+.child {
+@include centered;
+}
+*/
+
+@mixin coloured-card($color, $bool: false) {
+  @if($bool == true) {
+    .unfolding-list {
+      &__item {
+          &:nth-child(1) {
+              background: hsl($color, 100%, 22%);
+          }
+          &:nth-child(2) {
+              background: hsl($color, 100%, 92%);
+          }
+          &:nth-child(3) {
+              background: hsl($color, 100%, 80%);
+          }
+      }
+    }
+  }@else {
+    .unfolding-list {
+      &__item {
+          &:nth-child(1) {
+              background: linear-gradient(to bottom, hsl($color, 100%, 22%), #101922);
+  
+              li {
+                  color: hsl($color, 100%, 85%);
+                  border-color: hsl($color, 100%, 85%);
+              }
+          }
+          &:nth-child(2) {
+              background: linear-gradient(to bottom, hsl($color, 100%, 88%), #101922);
+              p {
+                color: hsl($color, 100%, 6%);
+              }
+          }
+          &:nth-child(3) {
+              background: linear-gradient(to bottom, hsl($color, 100%, 76%), #101922);
+          }
+        }
+    }
+    button {
+        background-color: hsl($color, 100%, 22%);
+        &:hover {
+            background-color: hsl($color, 100%, 35%);
+        }
+    }
+  }
+}

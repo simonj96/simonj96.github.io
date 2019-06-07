@@ -1,0 +1,58 @@
+*{
+	/* Universal reset: */
+	margin:0;
+	padding:0;
+}
+
+*::selection {
+  background: $pink;
+  
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-size: 0.825em;
+  color: #CCC9DC;
+  background-color: #324A5F;
+}
+
+.wrapper {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.line {
+  height: 1px;
+  background-color: #000000;
+  border-bottom: 1px solid #1B2A41;
+  margin: 1em 0;
+  overflow: hidden;
+}

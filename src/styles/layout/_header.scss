@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.clear:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+header {
+	z-index: 10;
+	& > h1{
+		color: #0C1821;
+	}
+	& > hgroup > h3 {
+		color: #CCC9DC;
+	}
+}

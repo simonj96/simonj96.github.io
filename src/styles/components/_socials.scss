@@ -1,0 +1,74 @@
+.social-icons {
+	list-style: none;
+	width: 50px;
+  position: fixed;
+  top:25%
+}
+.social-icons li {
+	float:none;
+  display: block
+}
+.social-icons li a {
+    display:inline-block;
+    width:100px;
+    height:100px;
+    float:left;
+    overflow:hidden
+}
+.social-icons li a i {
+    padding:25px;
+    font-size: 35px;
+}
+.facebook {
+    color:#ffffff
+}
+.facebook:hover {
+    color:#fff;
+  	background-color: #3d5b99
+}
+.twitter {
+    color:#00aced
+}
+.twitter:hover {
+    color:#fff;
+  	background-color: #00aced
+}
+.youtube {
+    color:#e64a41
+}
+.youtube:hover {
+    color:#fff;
+	  background-color: #e64a41
+}
+.linkedin {
+    color:#0073a4
+}
+.linkedin:hover {
+    color:#fff;
+  	background-color: #0073a4
+}
+.google-plus {
+    color:#e25714
+}
+.google-plus:hover {
+    color:#fff;
+  	background-color: #e25714
+}
+.facebook,
+.twitter,
+.youtube,
+.linkedin,
+.google-plus {
+    -o-transition:.5s ease;
+  	-ms-transition:.5s ease;
+  	-moz-transition:.5s ease;
+  	-webkit-transition:.5s ease;
+  	transition: .5s ease
+}
+.facebook:hover,
+.twitter:hover,
+.youtube:hover,
+.linkedin:hover,
+.google-plus:hover {
+    widows: 60px;
+}

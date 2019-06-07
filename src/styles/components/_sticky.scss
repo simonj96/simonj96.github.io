@@ -1,0 +1,38 @@
+.sticky-container {
+    background-color: #1B2A41;
+    box-shadow: #CCC9DC -1px 1px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 65px;
+      position: fixed;
+      top: 50%;
+      right: 0px;
+      width: 0px;
+      height: 55px;
+      z-index: 9999;
+      margin-top: -15px;
+      text-align: center;
+    
+    &:hover {
+      width: 85px;
+    }
+    
+      a {
+          padding:0 !important;
+          display: block;
+          text-align: left;
+          height: 15px;
+          width: 15px;
+          padding: 8px 16px;
+          color: #fff;
+          font-family: Arial, sans-serif;
+          font-size: 17px;
+          font-weight: bold;
+          text-decoration: none;
+      
+      img {
+        max-height: 100%;
+      }
+      }
+  }
